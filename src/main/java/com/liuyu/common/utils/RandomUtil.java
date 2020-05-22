@@ -52,4 +52,20 @@ public class RandomUtil {
 			}
 			return str;
 		}
+		
+		
+		//返回一个0-9之间的数据
+		public static int random() {
+			int[] str = {1,2,3,4,5,6,7,8,9,0};
+			return str[random(0, 9)];
+		}
+		
+		//方法5：返回指定长度的随机数字
+		public static String random(int length) {
+			StringBuffer str = new StringBuffer();
+			for (int i = 0; i < length; i++) {
+				str.append(random());
+			}
+			return str.toString();
+		}
 }
